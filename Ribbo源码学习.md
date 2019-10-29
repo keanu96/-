@@ -35,6 +35,8 @@ spring-cloud-common 包中提供了 LoadBalancerClient 接口，它是 Ribbon �
 
 而在 spring-cloud-commons 中相同的包下面，可以看到 LoadBalancerAutoConfiguration，看类名就能看出来这是一个自动配置类：
 
+![LoadBalancerAutoConfiguration](C:\Users\user1\Desktop\笔记\LoadBalancerAutoConfiguration.jpg)
+
 ```java
 @Configuration
 @ConditionalOnClass(RestTemplate.class)
@@ -73,7 +75,7 @@ public class RibbonAutoConfiguration {
 }
 ```
 
-该配置类中配置了 RibbonLoadBalancerClient 的 Bean，而且 RibbonLoadBalancerClient 继承 LoadBalancerClient。
+该配置类中配置了 RibbonLoadBalancerClient 的 Bean，而且 RibbonLoadBalancerClient 继承 LoadBalancerClient，所以在启动服务的时候会初始化一个 LoadBalancerClient Bean，并加载各种负载均衡的拦截器配置。
 
 LoadBalancerClient 接口中有三个方法：
 
