@@ -29,7 +29,7 @@ RestTemplate 在 Spring 中就已经存在了，查看以上的代码可以发�
 
 # 负载均衡初始化
 
-spring-cloud-commons 包中提供了 <font style="color:red">**LoadBalancerClient**</font> 接口，它是 Ribbon 中一个非常重要的组件。继承结构如下：
+spring-cloud-commons 包中定义了 <font style="color:red">**LoadBalancerClient**</font> 接口，它是 Ribbon 中一个非常重要的组件。继承结构如下：
 
 ![LoadBalancerClient 继承结构](C:\Users\user1\Desktop\笔记\LoadBalancerClient 继承结构.png)
 
